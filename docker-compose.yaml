@@ -1,0 +1,27 @@
+#version: '3.9'
+services:
+    vfs-agent:
+        image: 'vfs-agent:1.2.5'                    # Container initial release, agent v1.2.5
+        hostname: ${HOSTNAME_OVERRIDE}              # Option for forcing a specific hostname/FQDN value
+        stdin_open: true                            # Component of container interactive and logging
+        tty: true                                   # Component of container interactive and logging
+        ports:                                      #
+            - '664:664'                             #
+            - '623:623'                             # LMS ports
+            - '16992-16993:16992-16993'             #
+        devices:                                    #
+            - /dev/mei0                             # vPro ME device - required for activation
+        cgroup: host                                # 
+        volumes:                                    #
+            - './init.sh:/usr/local/bin/init.sh'    # Commenting this line sets the copied version as primary
+            - './PairingToken:/agent/PairingToken'  # Downloaded PairingToken
+            - './data:/agent/.data'                 # Activation status cache
+            - './logs:/agent/logs'                  # VFS agent log files
+            - '/sys/fs/cgroup:/sys/fs/cgroup:rw'    # Required for proper systemd functionality
+           #- '/etc/hostname:/etc/hostname:ro'      # Option for passing the proper system hostname/FQDN (part 1)
+           #- '/etc/hosts:/etc/hosts:ro'            # Option for passing the proper system hostname/FQDN (part 2)
+        privileged: true
+        container_name: vfs-agent
+        dns_search:
+            - ${DNS_SUFFIX}
+

@@ -1,0 +1,13 @@
+[Unit]
+Description=Executes /usr/local/bin/init.sh at container start
+After=multi-user.target
+
+[Service]
+Environment=SYSTEMD_LOG_LEVEL=debug
+Type=oneshot
+ExecStart=/usr/local/bin/init.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
+
