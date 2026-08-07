@@ -1,0 +1,37 @@
+# Intel(R) vPro Fleet Services activation agent container
+
+The Intel(R) vPro Fleet Services agent is used to provision Intel(R) AMT (Active Management Technologies, part of Intel(R) vPro) for use with the vPro Fleet Services cloud service.
+
+Create an account at https://vprofleet.intel.com and use this container on your vPro Linux devices today!
+
+## Getting started:
+
+```bash
+git clone https://github.com/sirfixalotgk/vProFleetAgentServicesDocker
+```
+Download the pairing token for the endpoint group you wish the device to provision against and place it in your local clone of this repo.
+
+NOTE: pairing tokens are unique to your VFS tenant and endpoint group BUT not to any device.  You can use the same pairing token to provision all of your vPro devices!
+
+Rename the 'rename-to-.env' file to '.env' and edit it to reflect the FQDN and primary DNS suffix that you wish the device to use (per device)
+(I'll provide some examples of how this could be scripted for automation soon)
+
+
+Execute the build.sh script to create the docker image.
+NOTE: You can use the build.sh script to clean the logs and data folders as well as update the image if you customize the Dockerfile.
+
+You're ready to activate!
+The container can be launched via 'docker compose' or 'docker run'.  
+From the local clone directory, execute the 'docker compose' command:
+```bash
+docker compose up -d
+```
+If you'd prefer to follow the log while it executes:
+```bash
+docker compose up
+```
+(docker run CLI example coming soon)
+
+The container self-terminates upon completion and success/failure can easily be parsed from the container logs.
+
+[docs]: https://device-management-toolkit.github.io/docs
