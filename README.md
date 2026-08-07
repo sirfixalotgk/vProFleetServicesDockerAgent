@@ -28,7 +28,7 @@ chmod 755 build.sh
 ```
 NOTE: You can use the build.sh script to clean the logs and data folders as well as update the image if you customize the Dockerfile.
 
-##You're ready to activate!
+## You're ready to activate!
 The container can be launched via 'docker compose' or 'docker run'.  
 From the local clone directory, execute the 'docker compose' command:
 ```bash
