@@ -4,6 +4,10 @@ The Intel(R) vPro Fleet Services agent is used to provision Intel(R) AMT (Active
 
 Create an account at https://vprofleet.intel.com and use this container on your vPro Linux devices today!
 
+NOTE: This container downloads, installs and uses applications/services from multiple sources.  By using this container, you agree to all licenses/agreements, without limitation, of any and all included software, asset, etc.
+https://github.com/rgl/lms-binaries
+
+
 ## Getting started:
 
 ```bash
