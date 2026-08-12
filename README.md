@@ -12,6 +12,14 @@ https://github.com/device-management-toolkit/rpc-go
 
 ## Getting started:
 
+Development and testing has been performed against the official Docker packages available directly from Docker. https://docs.docker.com/engine/
+
+Minimal testing has been performed against unofficial Docker packages available from the Linux distribution's repositories and they failed to provide predictable results.  It is HIGHLY recommended to use the official packages directly from Docker.  The installDocker.sh script is intended to provide a convenient way to add the official Docker repositories for use as the installation source.
+
+NOTE:  Before you can install Docker Engine, you need to uninstall any conflicting packages.
+
+Your Linux distribution may provide unofficial Docker packages, which may conflict with the official packages provided by Docker. You must uninstall these packages before you install the official version of Docker Engine.
+
 ```bash
 git clone https://github.com/sirfixalotgk/vProFleetAgentServicesDocker
 ```
