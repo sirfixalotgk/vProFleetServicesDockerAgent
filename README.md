@@ -14,7 +14,7 @@ https://github.com/device-management-toolkit/rpc-go
 
 The installDocker.sh script is intended to provide a convenient way to add the official Docker repositories for use as the installation source.
 
-Development and testing has been performed against the official packages available directly from Docker.  It is HIGHLY recommended to use the official packages directly from Docker.  Minimal testing has been performed against unofficial Docker packages available from the Linux distribution's repositories and they failed to provide predictable results.
+Development and testing has been performed against the official packages available directly from Docker.  It is HIGHLY recommended to use the official packages.  Minimal testing has been performed against unofficial Docker packages available from the Linux distribution's repositories and they failed to provide predictable results.
 
 NOTE:  Before you can install Docker Engine, you need to uninstall any conflicting packages.
 
