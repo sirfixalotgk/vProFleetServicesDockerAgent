@@ -19,7 +19,9 @@ Development and testing has been performed against the official packages availab
 NOTE:  Before you can install Docker Engine, you need to uninstall any conflicting packages.
 
 Your Linux distribution may provide unofficial Docker packages, which may conflict with the official packages provided by Docker. You must uninstall these packages before you install the official version of Docker Engine.
-See tutorials available here: https://docs.docker.com/engine/
+See tutorials available here: 
+
+https://docs.docker.com/engine/
 
 ## Clone the repo:
 
