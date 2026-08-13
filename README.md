@@ -61,7 +61,6 @@ If you'd prefer to follow the log while it executes:
 ```bash
 docker compose up
 ```
-If you'd prefer to parse, declare the hostname/DNS suffix in another way, leave default, etc., simply omit and/or alter the variable definition(s) and use lines, shown in the example below, to fit your requirements.
 
 Docker run example:
 ```bash
@@ -82,9 +81,10 @@ docker run -d -it --name vfs-agent \
     --cgroupns=host \
     vfs-agent:1.2.5
 ```
+Adjust the values in the .env and the docker-compose.yaml file if you'd prefer some other method to declare the hostname/DNS suffix and you are using "docker compose" to launch.
+
+Adjust the "docker run" parameters to fit your requirements if you'd prefer some other method to declare the hostname/DNS suffix and you are using that method to launch.
+
 The container self-terminates upon completion and success/failure can easily be parsed from the container logs.
-
-[docs]: https://device-management-toolkit.github.io/docs
-
 
 _NOTE: This is a privately developed asset and there is no assumption of liability, implied or explicit, with the use of this as a whole or with the use of any of the components.  Neither author, nor any 3rd party assumes any liability for it's use, distribution, etc._
